@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class Settings : MonoBehaviour
 {
-    private AudioMixer am;
-    private AudioMixer am1;
+    public AudioMixer MusicSettings;
+    public AudioMixer SoundsSettings;
     Resolution[] rsl;
     List<string> resolutions;
     public Dropdown dropdown;
@@ -21,12 +21,12 @@ public class Settings : MonoBehaviour
 
     public void AudioMusic(float sliderMusic)
     {
-        am.SetFloat("masterMusic", sliderMusic);
+        MusicSettings.SetFloat("masterMusic", sliderMusic);
     }
 
     public void AudioSound(float sliderSound)
     {
-        am1.SetFloat("masterSound", sliderSound);
+        SoundsSettings.SetFloat("masterSound", sliderSound);
     }
 
     public void Quality(int q)
