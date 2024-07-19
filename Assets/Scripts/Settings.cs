@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
@@ -10,7 +11,7 @@ public class Settings : MonoBehaviour
     public AudioMixer SoundsSettings;
     Resolution[] rsl;
     List<string> resolutions;
-    public Dropdown dropdown;
+    public TMP_Dropdown dropdown;
     public bool isFullScreen;
 
     public void FullScreenToggle()

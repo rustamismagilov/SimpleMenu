@@ -1,22 +1,32 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ChooseLevelControls : MonoBehaviour
 {
-    public void FirstLevelChoosed()
+    private List<string> sceneNames = new List<string>
     {
-        SceneManager.LoadScene("Forest");
+        "Forest",
+        "Castle",
+        "City"
+        // Add other level scene names here
+    };
+
+    public void LoadLevel(int levelIndex)
+    {
+        if (levelIndex >= 0 && levelIndex < sceneNames.Count)
+        {
+            SceneManager.LoadScene(sceneNames[levelIndex]);
+        }
+        else
+        {
+            Debug.LogError("Invalid level index!");
+        }
     }
 
-    public void SecondLevelChoosed()
+    // Example method to call from UI
+    public void OnLevelSelected(int levelIndex)
     {
-        SceneManager.LoadScene("Castle");
-    }
-
-    public void ThirdLevelChoosed()
-    {
-        SceneManager.LoadScene("City");
+        LoadLevel(levelIndex);
     }
 }

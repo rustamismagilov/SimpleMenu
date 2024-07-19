@@ -10,11 +10,11 @@ EditorBuildSettings:
     guid: 40df999728d197847bbfe175969c6876
   - enabled: 1
     path: Assets/Scenes/Forest.unity
-    guid: 60e2c581aec46b341bd42b50b0569e67
+    guid: c90efcd275f2ed3438d664a957e06ce3
   - enabled: 1
     path: Assets/Scenes/Castle.unity
     guid: 2d70f85845a5c8f4da5a14d00141b158
   - enabled: 1
     path: Assets/Scenes/City.unity
-    guid: bf91d6f4b4eb56c43888fe96e36a3d91
+    guid: 2070116303b66194b8370e58d5e4bebd
   m_configObjects: {}

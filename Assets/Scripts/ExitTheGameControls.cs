@@ -1,19 +1,27 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI; // Include this if you're working with UI buttons
 
-public class ExitTheGameControls : MonoBehaviour
+public class QuitManager : MonoBehaviour
 {
-    public void ExitPressed()
+    public Button quitButton; // Assign this in the Inspector
+
+    void Start()
     {
-        /*
+        // Ensure the quitButton is assigned
+        if (quitButton != null)
+        {
+            quitButton.onClick.AddListener(QuitGame);
+        }
+    }
+
+    public void QuitGame()
+    {
         #if UNITY_EDITOR
-        EditorApplication.isPlaying = false;
-        #endif
-        EditorApplication.ExitPlaymode();
-        */
+        // Exit play mode in the editor
+        UnityEditor.EditorApplication.isPlaying = false;
+        #else
+        // Quit the application in the build
         Application.Quit();
-        Debug.Log("Exit pressed!");
+        #endif
     }
 }
